@@ -1,0 +1,49 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: platform-team
+  namespace: default
+spec:
+  type: team
+  profile:
+    displayName: Platform Team
+  children:
+    - team-alpha
+    - team-beta
+    - team-gamma
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-alpha
+  namespace: default
+spec:
+  type: team
+  profile:
+    displayName: Team Alpha
+  parent: platform-team
+  children: []
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-beta
+  namespace: default
+spec:
+  type: team
+  profile:
+    displayName: Team Beta
+  parent: platform-team
+  children: []
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-gamma
+  namespace: default
+spec:
+  type: team
+  profile:
