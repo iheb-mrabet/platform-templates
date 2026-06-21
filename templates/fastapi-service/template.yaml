@@ -41,7 +41,11 @@ spec:
         repoUrl:
           title: Repository Location
           type: string
-          description: GitHub repository destination, for example github.com?owner=iheb-mrabet&repo=team-beta-api
+          # C'est ce champ magique qui va générer l'UI native de sélection de dépôt :
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com
         domain:
           title: Base Domain
           type: string
@@ -49,7 +53,7 @@ spec:
         imageRegistry:
           title: Image Registry
           type: string
-          description: ACR login server, for example youracr.azurecr.io
+          description: ACR login server, for example ihebplatacr.azurecr.io
 
   steps:
     - id: fetch-base
