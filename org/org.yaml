@@ -47,3 +47,7 @@ metadata:
 spec:
   type: team
   profile:
+    displayName: Team Gamma
+  parent: platform-team
+  children: []
+
