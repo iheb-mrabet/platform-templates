@@ -46,6 +46,8 @@ spec:
           ui:options:
             allowedHosts:
               - github.com
+            allowedOwners:
+              - iheb-mrabet
         domain:
           title: Base Domain
           type: string
